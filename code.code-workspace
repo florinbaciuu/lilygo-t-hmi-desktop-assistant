@@ -13,7 +13,7 @@
 		//------------------------------------------------------------------
 		// WORKBENCH 
 		"workbench.iconTheme": "vscode-icons",
-		"workbench.colorTheme": "Saturated Dark Modern",
+		"workbench.colorTheme": "Saturated Dark+",
 		"workbench.productIconTheme": "Default",
 		//"workbench.preferredDarkColorTheme": "Visual Studio 2017 Dark - C++", // chneau.saturated-dark-plus
 		//"workbench.preferredLightColorTheme": "Visual Studio 2017 Light - C++", // chneau.saturated-dark-plus
@@ -31,9 +31,11 @@
 		//	"Cascadia Code", "Dank Mono", "Fira Code", "Cousine", "MonoLisa", "Roboto", "Roboto Mono", "Operator Mono", "SF Mono", "Mononoki", "Overpass",
 		//  "Overpass Mono", "Twilio Sans Mono", "Twilio Sans",
 		//
-		"editor.fontFamily": "Code New Roman",
-		//"editor.fontFamily": "BlexMono Nerd Font Mono",
+		//"editor.fontFamily": "Code New Roman",
+		"editor.fontFamily": "BlexMono Nerd Font Mono",
+		//"editor.fontFamily": "Ubuntu Mono",
 		//"editor.fontFamily": "Gohu",
+		//"editor.fontFamily": "Intel One Mono",
 		//"editor.fontFamily": "VictorMono NF, monospace",
 		"editor.fontLigatures": "'zero', 'cant', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'", //work with "Monaspace Neon"
 		//"editor.fontLigatures": true,
@@ -89,7 +91,7 @@
 		//Terminal FONT //  "BlexMono Nerd Font Mono", "IBM Plex Mono", "Consolas",  "JetBrains Mono", "JetBrains Mono Regular", "JetBrains Mono Light",
 		//		"JetBrains Mono ExtraLight", "JetBrains Mono Thin", "JetBrains Mono Medium", "JetBrains Mono SemiBold", "JetBrains Mono ExtraBold", "Anonymous Pro",
 		//		"Cascadia Mono", "Dank Mono", "Fira Code", "Cousine", "MonoLisa", "Roboto Mono", "Operator Mono",
-		"terminal.integrated.fontFamily": "monospace",
+		"terminal.integrated.fontFamily": "BlexMono Nerd Font Mono",
 		"terminal.integrated.fontSize": 12,
 		"terminal.integrated.letterSpacing": -0,
 		"terminal.integrated.lineHeight": 1,
@@ -420,11 +422,8 @@
 		"clangd.inactiveRegions.useBackgroundHighlight": true,
 		"clangd.detectExtensionConflicts": false,
 		"clangd.enable": true,
-		//--------
-		"css.completion.completePropertyWithSemicolon": true,
-		//----------------------------------------------------
-		"terminal.integrated.suggest.enabled": true,
-		"terminal.integrated.suggest.insertTrailingSpace": true,
+		"clangd.enableHover": true,
+		"clangd.enableCodeCompletion": true,
 		//"cmakeIntelliSence.cmakePath": "/Users/florinbaciu/.espressif/tools/cmake/3.30.2/cmake-3.30.2-macos-universal/CMake.app/Contents/bin",
 		//"cmake.cmakePath": "/Users/florinbaciu/.espressif/tools/cmake/3.30.2/cmake-3.30.2-macos-universal/CMake.app/Contents/bin",
 		//----------------------------------------------------

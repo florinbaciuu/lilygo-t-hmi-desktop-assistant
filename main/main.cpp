@@ -253,7 +253,8 @@ void lv_main_task(void* parameter) {
 /*                   TASK                       */
 /********************************************** */
 void lv_ui_task(void* arg) {
-    s_lvgl_lock(portMAX_DELAY);
+    // s_lvgl_lock(portMAX_DELAY);
+    ss_lvgl_lock(portMAX_DELAY);
     create_tabs_ui();
     s_lvgl_unlock();
     vTaskDelete(NULL);  // moare dupa creare
