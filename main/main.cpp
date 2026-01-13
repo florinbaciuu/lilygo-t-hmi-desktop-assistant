@@ -8,10 +8,6 @@
 extern "C" {
 #include "CONFIG.h"
 #include "board_pins.h"
-#include <stdbool.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 #include "esp_rom_sys.h"
 #include "nvs_flash.h"
 #include "driver/gpio.h"
@@ -20,16 +16,15 @@ extern "C" {
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "lvgl.h"
-#include <lv_conf.h>
 
 #include "lvgl_port.h"
 #include "display_port.h"
 #include "touch_port.h"
+#include "ui.h"
 
 // my include
 #include "filesystem-os.h"
-#include "ui.h"
+
 }
 /**********************
  *   GLOBAL VARIABLES
@@ -78,19 +73,7 @@ void gfx_set_backlight(uint32_t mode) {
     gpio_set_level((gpio_num_t) BOARD_TFT_BL, mode);
 }
 //---------
-/**********************
- *   DISPLAY FUNCTIONS
- **********************/
 
-
-/**********************
- *   LVGL VARIABLES
- **********************/
-
-
-/**********************
- *   LVGL FUNCTIONS
- **********************/
 //---------
 //---------
 
