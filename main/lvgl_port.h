@@ -2,11 +2,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "freertos/FreeRTOS.h"
-#include "freertos/semphr.h"
-#include "freertos/task.h"
-#include "lvgl.h"
-#include <lv_conf.h>
-#include "CONFIG.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -15,6 +10,7 @@ extern "C" {
 /**********************
  *   LVGL FUNCTIONS
  **********************/
+bool s_lvgl_port_init_locking_mutex(void);
 bool s_lvgl_lock(TickType_t timeout);  // functie mai buna decat cea de mai sus
 void s_lvgl_unlock(void);
 void s_lvgl_port_init(void);  // superfunction de init LVGL
