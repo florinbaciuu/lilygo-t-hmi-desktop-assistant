@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Set usual component variables
-set( app_sources "main.cpp" "rtos.cpp" "lvgl_port.c" "display_driver.c" "display_port.c" "touch_port.c")
+set( app_sources "main.cpp" "lvgl_port.c" "display_port.c" "touch_port.c" "lvgl_rtos_port.c" "rtos_hooks.cpp")
 set( app_include_dirs "." "" )
 set( app_requires button cmake_utilities esp_lcd_touch esp_lcd_touch_xpt2046 esp_lv_fs esp_lvgl_port esp_mmap_assets fmt freertos-cpp littlefs lvgl )
 set( app_priv_requires ${app_requires} esp_bootloader_format nvs_flash esp_wifi esp_rom driver fatfs spi_flash esp_driver_usb_serial_jtag esp_system heap

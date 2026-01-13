@@ -16,7 +16,8 @@ static SemaphoreHandle_t s_lvgl_mutex = NULL;
 // -------------------------------
 
 bool s_lvgl_port_init_locking_mutex(void) {
-    s_lvgl_mutex = xSemaphoreCreateRecursiveMutex();
+    if (!s_lvgl_mutex)
+        s_lvgl_mutex = xSemaphoreCreateRecursiveMutex();
     return (s_lvgl_mutex != NULL);
 }
 

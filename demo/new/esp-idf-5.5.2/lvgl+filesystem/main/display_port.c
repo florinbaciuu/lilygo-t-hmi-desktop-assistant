@@ -17,6 +17,8 @@ esp_lcd_panel_io_handle_t lcd_io_handle   = NULL;
 esp_lcd_i80_bus_handle_t  i80_bus         = NULL;
 esp_lcd_panel_handle_t    panel_handle    = NULL;
 
+lv_display_t* disp;  // Display LVGL
+
 //================================================================
 
 /**********************
