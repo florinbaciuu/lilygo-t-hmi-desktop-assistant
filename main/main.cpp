@@ -187,7 +187,7 @@ void lv_main_task(void* parameter) {
 /********************************************** */
 void lv_ui_task(void* arg) {
     // s_lvgl_lock(portMAX_DELAY);
-    ss_lvgl_lock(portMAX_DELAY);
+    s_lvgl_lock(portMAX_DELAY);
     create_tabs_ui();
     s_lvgl_unlock();
     vTaskDelete(NULL);  // moare dupa creare
@@ -273,40 +273,7 @@ extern "C" void app_main(void) {
         ESP_ERROR_CHECK(nvs_flash_init());
     }
 
-    lv_init();
-
-#if LV_TICK_SOURCE == LV_TICK_SOURCE_CALLBACK
-    // Next function comment because create problems with lvgl timers and esp32 timers
-    lv_tick_set_cb(lv_get_rtos_tick_count_callback);
-#endif /* #if LV_TICK_SOURCE == LV_TICK_SOURCE_CALLBACK */
-
-    disp = lv_display_create(
-        (int32_t) LCD_WIDTH,
-        (int32_t) LCD_HEIGHT);
-
-    
-    lvgl_set_buffers_config(); // configure buffers based on CONFIG settings
-
-    lv_display_set_resolution(disp, LCD_WIDTH, LCD_HEIGHT);           // Seteaza rezolutia software
-    lv_display_set_physical_resolution(disp, LCD_WIDTH, LCD_HEIGHT);  // Actualizeaza rezolutia reala
-    lv_display_set_rotation(disp, (lv_display_rotation_t) 0);         // Seteaza rotatia lvgl
-    lv_display_set_render_mode(disp,
-        (lv_display_render_mode_t) RENDER_MODE);  // Seteaza (lv_display_render_mode_t)
-    lv_display_set_antialiasing(disp, true);      // Antialiasing DA sau NU
-    ESP_LOGI("LVGL", "LVGL display settings done");
-
-    lv_display_set_flush_cb(disp, lv_disp_flush);  // Set the flush callback which will be called to
-                                                   // copy the rendered image to the display.
-    ESP_LOGI("LVGL", "LVGL display flush callback set");
-
-    lv_indev_t* indev = lv_indev_create();           /*Initialize the (dummy) input device driver*/
-    lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /*Touchpad should have POINTER type*/
-    ////lv_indev_set_read_cb(indev, lv_touchpad_read);    // old version
-    lv_indev_set_read_cb(indev, lv_touchpad_read_v2);
-    ESP_LOGI("LVGL", "LVGL Setup done");
-
-    s_lvgl_port_init_locking_mutex();
-
+    s_lvgl_port_init();
 
     display_bus_config();
     display_io_i80_config();
