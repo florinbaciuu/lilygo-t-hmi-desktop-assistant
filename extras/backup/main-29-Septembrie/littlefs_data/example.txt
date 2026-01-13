@@ -1,1 +1,0 @@
-Hello World from littlefs by Baciu Aurel Florin
