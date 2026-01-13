@@ -13,7 +13,7 @@
 		//------------------------------------------------------------------
 		// WORKBENCH 
 		"workbench.iconTheme": "vscode-icons",
-		"workbench.colorTheme": "Saturated Dark Modern OLED",
+		"workbench.colorTheme": "Saturated Dark Modern",
 		"workbench.productIconTheme": "Default",
 		//"workbench.preferredDarkColorTheme": "Visual Studio 2017 Dark - C++", // chneau.saturated-dark-plus
 		//"workbench.preferredLightColorTheme": "Visual Studio 2017 Light - C++", // chneau.saturated-dark-plus
@@ -31,7 +31,10 @@
 		//	"Cascadia Code", "Dank Mono", "Fira Code", "Cousine", "MonoLisa", "Roboto", "Roboto Mono", "Operator Mono", "SF Mono", "Mononoki", "Overpass",
 		//  "Overpass Mono", "Twilio Sans Mono", "Twilio Sans",
 		//
-		"editor.fontFamily": "Hack Nerd Font",
+		"editor.fontFamily": "Code New Roman",
+		//"editor.fontFamily": "BlexMono Nerd Font Mono",
+		//"editor.fontFamily": "Gohu",
+		//"editor.fontFamily": "VictorMono NF, monospace",
 		"editor.fontLigatures": "'zero', 'cant', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'", //work with "Monaspace Neon"
 		//"editor.fontLigatures": true,
 		"editor.detectIndentation": true,
@@ -86,7 +89,7 @@
 		//Terminal FONT //  "BlexMono Nerd Font Mono", "IBM Plex Mono", "Consolas",  "JetBrains Mono", "JetBrains Mono Regular", "JetBrains Mono Light",
 		//		"JetBrains Mono ExtraLight", "JetBrains Mono Thin", "JetBrains Mono Medium", "JetBrains Mono SemiBold", "JetBrains Mono ExtraBold", "Anonymous Pro",
 		//		"Cascadia Mono", "Dank Mono", "Fira Code", "Cousine", "MonoLisa", "Roboto Mono", "Operator Mono",
-		"terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+		"terminal.integrated.fontFamily": "monospace",
 		"terminal.integrated.fontSize": 12,
 		"terminal.integrated.letterSpacing": -0,
 		"terminal.integrated.lineHeight": 1,
